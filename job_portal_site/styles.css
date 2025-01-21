@@ -9,7 +9,7 @@ body {
 .navbar {
   background: linear-gradient(to right, #6e0a87de, #e23daea3);
   color: white;
-  padding: 10px;
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -19,19 +19,24 @@ body {
   right: 0.1%;
   left: 0.1%;
   border-radius: 15px;
-  /* z-index: 1000; */
 }
 .navbar button {
   cursor: pointer;
+  flex-wrap: wrap;
+  font-size: 1.2em;
   color: white;
   background-color: #bc0dc9;
-  height: 30px;
-  width: 100px;
+  padding: 15px;
   border: none;
-  border-radius: 8px;
+  border-radius: 15px;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out;
 }
 .navbar button:hover {
-  background-color: #e23daea3;
+  transform: scale(1.1);
+  background-color: #e840f4;
+  box-shadow: 0 0 40px #e840f4;
 }
 .navbar button:active {
   background-color: #6e0a87de;
@@ -40,15 +45,15 @@ body {
 .search-section {
   text-align: center;
   background: linear-gradient(to right, #6e0a87de, #e23daea3);
-  margin: 100px 80px;
+  margin: 100px 80px 0 80px;
   padding: 30px;
   border-radius: 40px;
 }
 .search-section h1 {
-  color: white;
+  color: rgba(255, 255, 255, 0.905);
   font-size: 2.5em;
   margin: 10px 0 20px 0;
-  text-shadow: 4px 4px 4px #000000;
+  text-shadow: 2px 2px 2px rgba(13, 243, 235, 0.87);
 }
 .search-section input,
 .search-section select,
@@ -56,20 +61,75 @@ body {
 .search-section button {
   padding: 10px;
   margin: 5px;
-  border: 5px solid white;
+  border: 5px solid rgba(255, 255, 255, 0.335);
   border-radius: 10px;
 }
 
 .search-section button {
   background-color: #bc0dc9;
-  color: white;
+  color: smokewhite;
   font-size: 1.2em;
   border: none;
+  color: whitesmoke;
   cursor: pointer;
 }
 .search-section button:hover {
-  background-color: #e23daea3;
+  background-color: #e840f4;
+  box-shadow: 0 0 40px #e840f4;
 }
 .search-section button:active {
   background-color: #6e0a87de;
+}
+
+section h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  text-align: center;
+  margin: 70px 0 20px 0;
+  color: rgba(13, 243, 235, 0.87);
+  text-shadow: 1px 1px 1px rgba(13, 243, 235, 0.772);
+}
+.categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.category {
+  color: whitesmoke;
+  font-size: 1.5em;
+  text-align: center;
+  background-color: rgb(15, 152, 49);
+  padding: 10px;
+  border-radius: 15px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.category:hover {
+  transform: scale(1.1);
+  background-color: #14d024;
+  box-shadow: 0 0 40px #14d024;
+}
+.category:active {
+  background-color: rgb(16, 123, 43);
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.job-card,
+.seeker-card {
+  color: white;
+  aspect-ratio: 1/1;
+  text-align: center;
+  background: linear-gradient(to right, #0ab0a8c5, #e23daea3);
+  min-height: 400px;
+  min-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px#e23daea3;
 }
