@@ -86,7 +86,7 @@ body {
   box-shadow: 0 0 40px #40f4f1aa;
 }
 .search-section button:active {
-  transform: scale(0.7);
+  transform: scale(1.1);
   background-color: #8e14adde;
   box-shadow: 0 0 40px #40f4f1aa;
 }

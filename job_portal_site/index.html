@@ -20,7 +20,7 @@
       </nav>
       </header>
       <section class="search-section">
-        <h2>Find Your Dream Job</h2>
+        <h1>Find Your Dream Job</h1>
         <input type="text" placeholder="Job title, skills, etc." />
         <input type="text" placeholder="Location" />
         <select>
@@ -31,7 +31,7 @@
         </select>
         <button>Search</button>
       </section>
-      <section>
+      <section class="job">
         <h2>Explore Job Categories</h2>
         <div class="categories">
           <button class="category">Technology</button>
@@ -41,10 +41,10 @@
         </div>
       </section>
       <section>
-        <h1>Latest Job Listings</h1>
+        <h2 >Latest Job Listings</h2>
         <div class="cards-container">
           <script>
-            for (let i = 1; i <= 20; i++) {
+            for (let i = 1; i <= 15; i++) {
               document.write(`
                 <div class="job-card">
                   <img src="company-logo${i}.png" alt="Company Logo" />
@@ -57,10 +57,10 @@
                 </script>
       </section>
       <section>
-        <h1>Passionate Job Seekers</h1>
+        <h2>Passionate Job Seekers</h2>
         <div class="cards-container">
           <script>
-           for (let i = 1; i <= 20; i++) {
+           for (let i = 1; i <= 15; i++) {
             document.write(`
             <div class="seeker-card">
               <img src="jobseeker${i}.jpg" alt="Job Seeker Picture">
@@ -94,4 +94,4 @@
       </footer>
   </body>
 </html>
-<script src="script.js" defer></script>
+<script src="script.js" ></script>
