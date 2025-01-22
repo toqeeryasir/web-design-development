@@ -17,12 +17,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const button = document.createElement('button');
         button.textContent = 'Apply Now';
-
-        jobCard.appendChild(img);
-        jobCard.appendChild(title);
-        jobCard.appendChild(description);
-        jobCard.appendChild(button);
-
-        cardsContainer.appendChild(jobCard);
-    }
-});
