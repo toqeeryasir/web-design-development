@@ -8,9 +8,9 @@ body {
 }
 .navbar {
   background: linear-gradient(to right, #008c77, #007e0a);
-  background: linear-gradient(to right, #00940c, #008c77 );
-  background: linear-gradient(to right, #005907, #43004f );
-  filter: drop-shadow(0 0 5px #40ff0077);
+  background: linear-gradient(to right, #004f07, #005a4c );
+  background: linear-gradient(to right, #008d0cb7, #740188 );
+  filter: drop-shadow(0 0 5px rgba(0, 153, 255, 0.232));
   color: white;
   padding: 15px;
   display: flex;
