@@ -11,12 +11,16 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   color: white;
-  background: linear-gradient(110deg, #00ff154b, #bd05dd4b );
-  filter: drop-shadow(0 0 5px rgb(1, 255, 234));
+  background: linear-gradient(110deg, #00ff154b, #bd05dd4b);
+  filter: drop-shadow(0 0 10px rgb(1, 255, 234));
   padding: 15px;
-  margin: 5px 5px;
+  margin: 8px 8px;
   border-radius: 15px;
   z-index: 1;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 .navbar button {
   cursor: pointer;
@@ -44,13 +48,12 @@ body {
 
 .search-section {
   text-align: center;
-  background: linear-gradient(110deg, #00ff154b, #bd05dd4b );
-  filter: drop-shadow(0 0 5px rgb(1, 255, 234));
+  background: linear-gradient(110deg, #00ff154b, #bd05dd4b);
+  filter: drop-shadow(0 0 10px rgb(1, 255, 234));
+
   margin: 120px 80px 0 80px;
   padding: 30px;
   border-radius: 40px;
-  position: sticky;
-
 }
 .search-section h1 {
   color: rgba(255, 255, 255, 0.905);
@@ -140,10 +143,11 @@ section h2 {
 .job-card,
 .seeker-card {
   color: white;
+  background: linear-gradient(110deg, #00ff154b, #bd05dd4b);
+  filter: drop-shadow(0 0 10px rgb(1, 255, 234));
+  border: none;
   aspect-ratio: 1/1;
   text-align: center;
-  /* background: linear-gradient(to right, #05ddbd3a, #d13de255); */
-  background: linear-gradient(to right, #05ddbd97, #0bdf1db6);
   min-height: 370px;
   min-width: 370px;
   border-radius: 40px;
