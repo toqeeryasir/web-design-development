@@ -4,11 +4,12 @@
 }
 body {
   font-family: Arial, sans-serif;
-  background: rgba(0, 0, 0, 0.899);
+  background: rgb(0, 0, 0);
 }
 .navbar {
-  background: linear-gradient(to right, #05ddbd3a, #d13de255);
-  filter: drop-shadow(0 0 10px #3de2c65c);
+  /* background: linear-gradient(to right, #05ddbd3a, #d13de255); */
+  background: linear-gradient(to right, #05ddbd80, #00ff1560);
+  filter: drop-shadow(0 0 10px #00ffd5c8);
   color: white;
   padding: 15px;
   display: flex;
@@ -48,7 +49,10 @@ body {
 
 .search-section {
   text-align: center;
-  background: linear-gradient(to right, #05ddbd3a, #d13de255);
+  /* background: linear-gradient(to right, #05ddbd3a, #d13de255); */
+  /* background: linear-gradient(to right, #05ddbd80, #00ff1560); */
+  background: linear-gradient(to right, #05ddbd97, #0bdf1db6);
+
   margin: 100px 80px 0 80px;
   padding: 30px;
   border-radius: 40px;
@@ -135,7 +139,7 @@ section h2 {
   justify-content: center;
   align-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 40px 20px 20px 20px;
   gap: 20px;
 }
 
@@ -144,7 +148,8 @@ section h2 {
   color: white;
   aspect-ratio: 1/1;
   text-align: center;
-  background: linear-gradient(to right, #05ddbd3a, #d13de255);
+  /* background: linear-gradient(to right, #05ddbd3a, #d13de255); */
+  background: linear-gradient(to right, #05ddbd97, #0bdf1db6);
   min-height: 370px;
   min-width: 370px;
   border-radius: 40px;
