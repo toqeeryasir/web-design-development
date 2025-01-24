@@ -63,15 +63,24 @@ body {
 }
 .search-section input,
 .search-section select,
-.search-section select option,
+.search-section select option{
+  padding: 10px;
+  font-size: large;
+  margin: 5px;
+  border: 5px solid rgba(255, 255, 255, 0.335);
+  outline: none;
+  border-radius: 10px;
+  font-weight: bold;
+  flex-shrink: 1;
+
+}
+
 .search-section button {
   padding: 10px;
   margin: 5px;
   border: 5px solid rgba(255, 255, 255, 0.335);
   border-radius: 10px;
-}
-
-.search-section button {
+  font-weight: bold;
   background-color: #8e14adde;
   color: smokewhite;
   font-size: 1.2em;
@@ -90,6 +99,17 @@ body {
   transform: scale(1.1);
   background-color: #8e14adde;
   box-shadow: 0 0 40px #40f4f1aa;
+}
+.search-section button:focus{
+  outline: 3px solid rgba(255, 255, 255, 0.734);
+}
+
+.search-section input:focus{
+  outline: 3px solid rgba(208, 13, 243, 0.87);
+}
+
+.search-section select:focus{
+  outline: 3px solid rgba(208, 13, 243, 0.87);
 }
 
 section h2 {
@@ -110,7 +130,7 @@ section h2 {
   font-size: 1.5em;
   text-align: center;
   background-color: rgb(15, 152, 49);
-  filter: drop-shadow(0 40px 20px #14d0244c);
+  filter: drop-shadow(0 60px 30px #14d024c2);
   padding: 10px;
   border-radius: 15px;
   margin: 10px;
@@ -118,7 +138,7 @@ section h2 {
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
-  box-shadow: 0 0 5px #14d024;
+  box-shadow: 0 0 15px #14d024;
 }
 .category:hover {
   transform: scale(1.1);
