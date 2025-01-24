@@ -128,7 +128,7 @@ section h2 {
   font-size: 1.5em;
   text-align: center;
   background-color: rgb(15, 152, 49);
-  filter: drop-shadow(0 60px 30px #14d024c2);
+  filter: drop-shadow(0 60px 40px #14d024c2);
   padding: 10px;
   border-radius: 15px;
   margin: 10px;
@@ -206,4 +206,34 @@ section h2 {
   opacity: 0.3;
   z-index: -1;
   filter: blur(22px);
+}
+
+
+
+.step {
+  width: 100%;
+}
+
+
+ul{
+  list-style-type: number;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+li{
+  color: rgb(11, 184, 54);
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: transform 0.1s ease-in-out;
+}
+
+li:hover{
+  color: rgb(11, 184, 54);
+  text-decoration: underline;
+  transform: scale(1.2);
 }
