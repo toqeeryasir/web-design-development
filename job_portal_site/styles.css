@@ -162,7 +162,7 @@ section h2 {
 .seeker-card {
   color: white;
   background: linear-gradient(110deg, #00ff154b, #bd05dd4b);
-  filter: drop-shadow(0 0 10px rgb(1, 255, 234));
+  filter: drop-shadow(0 0 10px rgba(1, 255, 234, 0.607));
   border: none;
   aspect-ratio: 1/1;
   text-align: center;
@@ -207,8 +207,6 @@ section h2 {
   z-index: -1;
   filter: blur(22px);
 }
-
-
 
 .step {
   width: 100%;

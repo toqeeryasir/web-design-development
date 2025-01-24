@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="in_or_up.css" />
+  </had>
+  <body>
+    <div class="divs-container">
+      <!-- Sign In -->
+      <div class="sign-in">
+        <form action="sign_in.php" method="post">
+          <label for="">Enter Your Email:</label>
+          <input type="email" name="email" placeholder="Email" />
+          <label for="">Enter Your Password:</label>
+          <input type="password" name="password" placeholder="Password" />
+          <button type="submit">Sign In</button>
+          <a href="#">Forget Password!</a>
+        </form>
+        <div class="sign-in-right">
+        <h2>Welcome Back</h2>
+        <p>
+          To keep connected with us please sign-in with your personal info.
+        </p>
+        <button>Sign Up</button>
+      </div>
+
+      <!-- Sign Up -->
+      <div class="sign-up">
+        <form action="sign_up.php" method="post">
+          <input type="text" name="name" placeholder="Name" />
+          <input type="email" name="email" placeholder="Email" />
+          <input type="password" name="password" placeholder="Password" />
+          <button type="submit">Sign Up</button>
+        </form>
+        <div class="sign-up-left">
+          <h2>Thanks For Joining Us</h2>
+          <p>
+            Please enter your personal details and start journey with us.
+          </p>
+          <button>Sign In</button>
+      </div>
+    </div>
+  </body>
+</html>
