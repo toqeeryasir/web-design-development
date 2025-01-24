@@ -226,7 +226,7 @@ ul{
   width: 100%;
 }
 li{
-  color: rgb(11, 184, 54);
+  color: rgba(255, 255, 255, 0.839);
   font-size: 1.2em;
   font-weight: bold;
   transition: transform 0.1s ease-in-out;
@@ -236,4 +236,36 @@ li:hover{
   color: rgb(11, 184, 54);
   text-decoration: underline;
   transform: scale(1.2);
+  cursor: pointer;
+}
+
+footer{
+  background: linear-gradient(110deg, #00ff1544, #bd05dd4b);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.702));
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 15px;
+  margin: 40px 5px 10px 5px;
+  line-height: 40px;
+}
+
+.social-links > a{
+  color: rgba(255, 255, 255, 0.685);
+  font-size: 1.5em;
+  margin: 0 10px;
+  flex-wrap: wrap;
+  transition: transform 0.1s ease-in-out;
+}
+.social-links > a:hover{
+  transform: scale(1.2);
+  color: rgb(60, 255, 0);
+
+}
+
+.social-links > a:active{
+  transform: scale(1.1);
+  color: rgb(60, 255, 0);
 }
