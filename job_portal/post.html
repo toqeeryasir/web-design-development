@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="post.css" />
+  </head>
+  <body>
+    <div class="homepage">
+      <button id="postButton">Post</button>
+    </div>
+
+    <!-- Job Seeker Form -->
+    <div id="jobSeekerForm" class="form-container hidden">
+      <h1>Job Seeker Registration</h1>
+      <form action="submit-form.php" method="POST">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name">Full Name:</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your full name"
+            required
+          />
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+          <label for="contact">Phone Number:</label>
+          <input
+            type="tel"
+            id="contact"
+            placeholder="Enter your phone number"
+            required
+          />
+          <label for="location">Location:</label>
+          <input
+            type="text"
+            id="location"
+            placeholder="Your city & country"
+            required
+          />
+        </fieldset>
+        <fieldset>
+          <legend>Job Preferences</legend>
+          <label for="jobCategory">Select Your Job Category:</label>
+          <select id="jobCategory" required>
+            <option value="">Select One</option>
+            <option value="tech">Technology</option>
+            <option value="marketing">Marketing</option>
+            <option value="healthcare">Healthcare</option>
+            <option value="education">Education</option>
+          </select>
+          <label for="profilePic">Upload Your Picture:</label>
+          <input type="file" id="profilePic" accept=".png, .jpg, .jpeg" />
+        </fieldset>
+        <fieldset>
+          <legend>Skills & Experience</legend>
+          <label for="skills">Key Skills:</label>
+          <textarea
+            id="skills"
+            rows="4"
+            placeholder="Example: JavaScript, Python, Marketing"
+            required
+          ></textarea>
+          <label for="experience">Work Experience:</label>
+          <textarea
+            id="experience"
+            rows="4"
+            placeholder="Brief summary of your work experience"
+            required
+          ></textarea>
+        </fieldset>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Employer Form -->
+    <div id="employerForm" class="form-container hidden">
+      <h1>Post a Job</h1>
+      <form id="job-post-form">
+        <div class="form-group">
+          <label for="job-title">Job Title</label>
+          <input
+            type="text"
+            id="job-title"
+            name="job-title"
+            placeholder="Enter job title"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="company-name">Company Name</label>
+          <input
+            type="text"
+            id="company-name"
+            name="company-name"
+            placeholder="Enter company name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="job-location">Job Location</label>
+          <input
+            type="text"
+            id="job-location"
+            name="job-location"
+            placeholder="Enter job location"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="job-description">Job Description</label>
+          <textarea
+            id="job-description"
+            name="job-description"
+            placeholder="Enter job description"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="required-skills">Required Skills</label>
+          <input
+            type="text"
+            id="required-skills"
+            name="required-skills"
+            placeholder="Enter required skills"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="application-email">Application Email</label>
+          <input
+            type="email"
+            id="application-email"
+            name="application-email"
+            placeholder="Enter email for applications"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <button type="submit">Post Job</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="post.js"></script>
+  </body>
+</html>
