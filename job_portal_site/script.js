@@ -9,3 +9,5 @@ document.getElementById("post").addEventListener("click", () => {
 document.getElementById("contactUs").addEventListener("click", () => {
   window.location.assign("contactUs.html");
 });
+
+
