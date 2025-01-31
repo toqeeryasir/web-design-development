@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post a Job</title>
+    <link rel="stylesheet" href="post_a_job.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Post a Job</h1>
+      <form id="job-post-form">
+        <!-- Job Title -->
+        <div class="form-group">
+          <label for="job-title">Job Title</label>
+          <input
+            type="text"
+            id="job-title"
+            name="job-title"
+            placeholder="Enter job title"
+            required
+          />
+        </div>
+
+        <!-- Company Name -->
+        <div class="form-group">
+          <label for="company-name">Company Name</label>
+          <input
+            type="text"
+            id="company-name"
+            name="company-name"
+            placeholder="Enter company name"
+            required
+          />
+        </div>
+
+        <!-- Job Location -->
+        <div class="form-group">
+          <label for="job-location">Job Location</label>
+          <input
+            type="text"
+            id="job-location"
+            name="job-location"
+            placeholder="Enter job location"
+            required
+          />
+        </div>
+
+        <!-- Job Description -->
+        <div class="form-group">
+          <label for="job-description">Job Description</label>
+          <textarea
+            id="job-description"
+            name="job-description"
+            placeholder="Enter job description"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+
+        <!-- Required Skills -->
+        <div class="form-group">
+          <label for="required-skills">Required Skills</label>
+          <input
+            type="text"
+            id="required-skills"
+            name="required-skills"
+            placeholder="Enter required skills"
+            required
+          />
+        </div>
+
+        <!-- Application Email -->
+        <div class="form-group">
+          <label for="application-email">Application Email</label>
+          <input
+            type="email"
+            id="application-email"
+            name="application-email"
+            placeholder="Enter email for applications"
+            required
+          />
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+          <button type="submit">Post Job</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
