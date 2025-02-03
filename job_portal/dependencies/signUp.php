@@ -5,8 +5,8 @@ include 'connection.php';
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    # password_hash for password encryption:
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-
     # checking if the user already exists or not:
 
     $checkUserQuery = "SELECT * FROM users WHERE email='$email'";
