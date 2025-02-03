@@ -5,6 +5,7 @@ include 'connection.php';
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = $_POST['password'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     # checking if the user already exists or not:
 
