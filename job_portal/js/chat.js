@@ -1,3 +1,4 @@
+// filepath: /home/toqeer-yasir/Documents/web-design-development/job_portal/js/chat.js
 // script.js
 const chatBox = document.getElementById("chat-box");
 const messageInput = document.getElementById("message-input");
@@ -19,49 +20,76 @@ socket.addEventListener("message", (event) => {
 });
 
 // Send message
-sendButton.addEventListener("click", () => {
+sendButton.addEventListener("click", sendMessage);
+
+// Send message on Enter key press
+messageInput.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    sendMessage();
+  }
+});
+
+// Send message function
+function sendMessage() {
   const messageText = messageInput.value.trim();
   if (messageText) {
     const message = {
       sender: username,
       text: messageText,
+      timestamp: new Date().toLocaleTimeString(),
     };
     socket.send(JSON.stringify(message));
     appendMessage(username, messageText, "sent");
     messageInput.value = "";
   }
-});
+}
 
 // Append message to chat box
 function appendMessage(sender, text, type) {
   const messageElement = document.createElement("div");
   messageElement.classList.add("message", type);
-  messageElement.textContent = `${sender}: ${text}`;
+
+  const senderElement = document.createElement("span");
+  senderElement.classList.add("sender");
+  senderElement.textContent = sender;
+
+  const textElement = document.createElement("span");
+  textElement.classList.add("text");
+  textElement.textContent = text;
+
+  const timestampElement = document.createElement("span");
+  timestampElement.classList.add("timestamp");
+  timestampElement.textContent = new Date().toLocaleTimeString();
+
+  messageElement.appendChild(senderElement);
+  messageElement.appendChild(textElement);
+  messageElement.appendChild(timestampElement);
+
   chatBox.appendChild(messageElement);
   chatBox.scrollTop = chatBox.scrollHeight; // Auto-scroll to the latest message
 }
 
-// server.js
-const WebSocket = require("ws");
-
-const server = new WebSocket.Server({ port: 8080 });
-
-server.on("connection", (socket) => {
-  console.log("A new client connected!");
-
-  socket.on("message", (message) => {
-    const parsedMessage = JSON.parse(message);
-    // Broadcast the message to all connected clients
-    server.clients.forEach((client) => {
-      if (client.readyState === WebSocket.OPEN) {
-        client.send(JSON.stringify(parsedMessage));
-      }
-    });
-  });
-
-  socket.on("close", () => {
-    console.log("A client disconnected.");
-  });
+// Notify when a user joins or leaves
+socket.addEventListener("open", () => {
+  const joinMessage = {
+    sender: "System",
+    text: `${username} has joined the chat.`,
+    timestamp: new Date().toLocaleTimeString(),
+  };
+  socket.send(JSON.stringify(joinMessage));
 });
 
-console.log("WebSocket server is running on ws://localhost:8080");
+socket.addEventListener("close", () => {
+  const leaveMessage = {
+    sender: "System",
+    text: `${username} has left the chat.`,
+    timestamp: new Date().toLocaleTimeString(),
+  };
+  socket.send(JSON.stringify(leaveMessage));
+});
+
+// Handle WebSocket errors
+socket.addEventListener("error", (error) => {
+  console.error("WebSocket error:", error);
+  alert("An error occurred with the WebSocket connection.");
+});
